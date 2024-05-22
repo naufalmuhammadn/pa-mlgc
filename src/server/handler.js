@@ -30,7 +30,7 @@ async function postPredictHandler(request, h) {
 }
 
 async function getPredictHistories(request, h) {
-    await getData();
+    const data = await getData();
     const response = h.response({
         status: 'success',
         data
