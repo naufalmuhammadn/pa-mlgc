@@ -29,7 +29,7 @@ const InputError = require('../exceptions/InputError');
                 status: 'fail',
                 message: 'Terjadi kesalahan dalam melakukan prediksi'
             })
-            newResponse.code(response.statusCode)
+            newResponse.code(400)
             return newResponse;
         }
  
@@ -38,7 +38,7 @@ const InputError = require('../exceptions/InputError');
                 status: 'fail',
                 message: response.message
             })
-            newResponse.code(response.statusCode)
+            newResponse.code(response.output.statusCode)
             return newResponse;
         }
  
